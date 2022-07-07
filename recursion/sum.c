@@ -13,7 +13,8 @@ int main(){
 int sumNum(int num){
    int sum;
     if (num==0){
-        return sum;
+        return num;
         }
         sum=num+sumNum(num-1);
+        return sum;
 }
