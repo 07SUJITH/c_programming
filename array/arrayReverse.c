@@ -12,22 +12,22 @@ void readArr(int arr[],int n);
 
 
 int main(){
-    int n,arr[100];
+    int n,A[100];
     
     printf("enter the size of array");
     scanf("%d",&n);
     
     printf("enter the array digits:\n");
-    readArr(arr,n);
+    readArr(A,n);
 
-    reverse(arr,n);
+    reverse(A,n);
     printf("Reversed array is :\n");
-    printArr(arr,n);
+    printArr(A,n);
     
 }
-void readArr(int arr[],int n){
+void readArr(int B[],int n){
     for(int i=0;i<n;i++){
-        scanf("%d",&arr[i]);
+        scanf("%d",&B[i]);
     }
    
 }
