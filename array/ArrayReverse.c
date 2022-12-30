@@ -1,13 +1,8 @@
 #include<stdio.h>
 
-// function call reference
-
-// function for reverse the array
-void reverse(int arr[],int n);
-//function for print tha array
-void printArr(int arr[],int n);
-//function for raed the array
-void readArr(int arr[],int n);
+void reverse(int *arr, int n);
+void printArr(int *arr,int n);
+void readArr(int *arr, int n);
 
 
 
@@ -25,15 +20,15 @@ int main(){
     printArr(A,n);
     
 }
-void readArr(int B[],int n){
+void readArr(int *arr,int n){
     for(int i=0;i<n;i++){
-        scanf("%d",&B[i]);
+        scanf("%d",&arr[i]);
     }
    
 }
-void reverse(int arr[],int n){
+void reverse(int *arr,int n){
     for(int i=0;i<n/2;i++){
-        //swapping upto (n/2 -1 )th index (i<n/2)
+        //swapping upto (n/2 -1 )th index
         // if i<n then swapping will take place two  times ie,net effect is zero
     int firstVal=arr[i];
     int secondVal=arr[n-i-1];
@@ -44,10 +39,9 @@ void reverse(int arr[],int n){
     }
    
 }
-void printArr(int arr[],int n){
+void printArr(int *arr,int n){
     for(int i=0;i<n;i++){
-        printf("%d\t",arr[i]);
-    
+        printf("%d\t",*(arr+i));
     }
 printf("\n");
 
